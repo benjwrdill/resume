@@ -1,0 +1,253 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\\ \smallskip
+			{#5}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Benjamin Dill}{231 Brookwood Dr}{Auburn, AL 36830}{dillben@auburn.edu}{(334) 524-2225}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Objective
+%\header{Objective}
+%
+%\begin{body}
+%	\vspace{14pt}
+%	To acquire employment that allows me to use and expand my knowledge in Computer Science and Software Development
+%\end{body}
+%
+%\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{B.S in Computer Science}{} \hfill December 2014{} \\
+	\emph{Auburn University}, Auburn, AL{} %  \hfill \textbf{GPA:} 2.3 \\
+	\hspace{4ex} Patterns, Algorithms, Network and Data Security, Networks, Databases
+%\medskip
+% more entries here 
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Career History}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{Software Developer in Testing}, \emph{Command Alkon, Incorporated} \hfill 2015 - 2017 \\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Acted as an internal solutions provider to several multi-regional teams
+		\item Created systems to automate the development and delivery process using Jenkins and in-house solutions
+		\item Used TFS and git as part of the software development collaborative process
+		\item Spearheaded implementation of automated testing as a first-class citizen of the development process
+		\item Implemented several programs to aid in new developer on-boarding and continuing education
+		\item Created a Ruby on Rails API and front-end application to aggregate test and build data and provide real-time development data to stakeholders
+		\item Managed Chef automation for development group local and cloud machines
+	\end{itemize}
+	\vspace{17pt}
+
+	\textbf{Lab Monitor/Student Worker}, \emph{Auburn University} \hfill January 2012 - 2015\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Monitored and serviced computer labs in order to assure availability to students
+		\item Worked as frontline tech support
+		\item Performed troubleshooting, virus identification and removal, and PC management
+		\item Visited user offices to aid in PC problem diagnosis
+		\item Ensured open communication lines between coworkers on varied time schedules
+	\end{itemize}
+	\vspace{17pt}
+
+	\textbf{Proof Operator}, \emph{AuburnBank} \hfill January 2010 - February 2013 \\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Assisted outside support in troubleshooting specific issues with bank software
+		\item Operated scanners and terminals in order to perform the day to day duties of electronic record keeping
+		\item Input data concerning customer records and ensured accuracy and confidentiality of archived documents
+		\item Assured the timely printing and distribution of company records
+		\item Worked alone in a self-motivated environment
+		\item Coordinated schedules with coworkers on a weekly basis
+	\end{itemize}
+	\vspace{17pt}
+
+	\textbf {Restaurant Manager}, \emph{Boom Foods/Sonic Drive-In} \hfill March 2007 - February 2011\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Remained calm and coordinated crew efforts during rush periods
+		\item Solved guest problems in a pleasant and effective manner
+	\end{itemize}
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+%$$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projects
+\header{Projects}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{vue-smells} \url{https://github.com/benjwrdill/vue-smells} \hfill{} 2017
+	\begin{itemize}
+		\item{Created a single-page application using Vue.js}
+		\item{Accumulated code smells as a learning and mindfulness exercise to aid in development team learning}
+		\item{Implemented the Store/Mutation/Action state management pattern with Vuex}
+	\end{itemize}
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+%\header{Selected Publications}
+%
+%\begin{body}
+%	\vspace{14pt}
+%	Seth Holloway. ``\textbf{Writing Resumes in LaTeX},'' in \emph{Proceedings of the Mind of Seth Holloway}. 2011.\\
+%	\smallskip
+%	Seth Holloway, Andrea Holloway. ``\textbf{Accent Modification Rules},'' in \emph{Proceedings of Fun}. 2008.\\
+%\end{body}
+
+%\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Skills}
+
+\begin{body}
+	\vspace{17pt}
+	{(Rated 1 - Basic to 5 - Expert)} \\
+	\textbf{Programming:} Python (4), Ruby on Rails (4), Perl (3), \LaTeX (3), Javascript (3)\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Activities and Leadership}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{Head Organizer}, Steel City Swing \hfill{} 2015 - Current\\
+	\vspace{-4pt}
+	\begin{itemize}
+		\item{Coordinated on budget matters with committee members in order to achieve long-term goals}
+		\item{Lead instruction and recruitment efforts across all platforms}
+		\item{Started an SEO and print marketing program}
+		\item{Drove integrations across several APIs (Facebook Graph API, Meetup, Weebly)}
+	\end{itemize}
+	\textbf{Amateur Radio Operator}, FCC callsign KK4WZF \hfill{} 2014 - Current\\
+	\vspace{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item{Built and experimented with various antenna designs}
+		\item{Administered local teaching and testing initiatives}
+	\end{itemize}
+\textbf{Security Capture the Flag} Auburn University CTF Team (2015), Samurai \hfill{} 2014 - 2016\\
+	\vspace{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item{Studied and presented computer security techniques}
+		\item{Formulated and executed exploits against binaries}
+	\end{itemize}	
+	\textbf{Outreach Coordinator}, Auburn University Amateur Radio Club (AUARC) \hfill {} 2013 - 2015\\
+	\textbf{Head Instructor}, Auburn University Swing Dance Association (AUSDA) \hfill {} 2010 - 2015\\
+	\vspace{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item{Created and iterated upon class curricula for introductory through advanced class tracks}
+		\item{Worked with incoming instructors to improve teaching style and clarity}
+	\end{itemize}
+	\textbf{President}, Auburn University Swing Dance Association (AUSDA) \hfill {} 2007 - 2009\ \ \ \ \ \ \\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Web}
+
+\begin{body}
+	\vspace{17pt}
+	http://about.me/bendill \hfill{} https://github.com/benjwrdill \\
+\end{body}
+
+\end{document}
+

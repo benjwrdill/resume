@@ -1,0 +1,9 @@
+*.pdf
+*.png
+*.aux
+*.log
+*.out
+Thumbs.db
+*.gz
+*.doc
+*.docx
