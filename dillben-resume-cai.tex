@@ -1,0 +1,253 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\\ \smallskip
+			{#5}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Benjamin Dill}{4709 Sylvaner Ln}{Birmingham, AL 35244}{ben@benjamindill.com}{(334) 524-2225}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Objective
+%\header{Objective}
+%
+%\begin{body}
+%	\vspace{14pt}
+%	To acquire employment that allows me to use and expand my knowledge in Computer Science and Software Development
+%\end{body}
+%
+%\smallskip
+
+%$$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projects
+\header{Projects}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{vue-smells}  \hfill{} 2017
+	\begin{itemize}
+		\item{Created a single-page application using Vue.js}
+		\item{Implemented the Store/Mutation/Action state management pattern with Vuex to ensure data integrity}
+		\item{Integrated with Google Firebase as a data backend and login system}
+	\end{itemize}
+\end{body}
+
+\begin{body}
+    \vspace{17pt}
+    \textbf{autotest-metrics} \hfill{} 2016
+    \begin{itemize}
+        \item{Created a reporting application using Ruby on Rails and bootstrap.js}
+        \item{Implemented a RESTful API for external applications to consume}
+        \item{Managed production machine deployment and secret keeping}
+        \item{Created Vagrant (VMWare) machines to standardize dev environments}
+    \end{itemize}
+\end{body}
+
+
+\header{Latest Learning}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{In Progress}\\
+	\emph{Test Driven Development by Example} Kent Beck\\
+	\emph{Clojure from the Ground Up} Kyle Kingsbury\\
+	\emph{The Art of Monitoring} James Turnbull\\
+	\emph{Soft Skills} John S. Somnez\\
+	\emph{The Lean Startup} Eric Ries\\
+	\emph{Learn You a Haskell} Miran Lipovaca \hfill{} 2016\\
+	\textbf{Complete}\\
+	\emph{The Phoenix Project} Gene Kim \hfill{} 2017\\
+	\emph{The Art of Software Testing} Myers, Badgett, Thomas, and Sandler \hfill{} 2016
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{B.S in Computer Science}{} \hfill December 2014{} \\
+	\emph{Auburn University}, Auburn, AL{} %  \hfill \textbf{GPA:} 2.3 \\
+	\hspace{4ex} Patterns, Algorithms, Network and Data Security, Networks, Databases
+%\medskip
+% more entries here 
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Career History}
+
+\begin{body}
+	\vspace{17pt}
+	\textbf{Software Developer in Testing}, \emph{Command Alkon, Incorporated} \hfill 2015 - 2017 \\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Acts as an internal solutions provider to several multi-regional teams
+		\item Creates systems to automate the testing process using Jenkins and in-house solutions
+		\item Uses TFS and git as part of the software development collaborative process
+		\item Implemented several programs to aid in new developer on-boarding and continuing education
+		\item Manages Chef automation for development group local and cloud machines
+	\end{itemize}
+	\vspace{17pt}
+
+	\textbf{Lab Monitor/Student Worker}, \emph{Auburn University} \hfill January 2012 - 2015\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Monitored and serviced computer labs in order to assure availability to students
+		\item Worked as frontline tech support
+		\item Ensured open communication lines between coworkers on varied time schedules
+	\end{itemize}
+	\vspace{17pt}
+
+	\textbf{Proof Operator}, \emph{AuburnBank} \hfill January 2010 - February 2013 \\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item Assisted outside support in troubleshooting specific issues with bank software
+		\item Worked alone in a self-motivated environment
+	\end{itemize}
+	\vspace{17pt}
+
+	\textbf {Restaurant Manager}, \emph{Boom Foods/Sonic Drive-In} \hfill March 2007 - February 2011\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item Maintained calm demeanor under stressful time sensitive constraints
+		\item Coordinated employee efforts during rush periods
+	\end{itemize}
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+%\header{Selected Publications}
+%
+%\begin{body}
+%	\vspace{14pt}
+%	Seth Holloway. ``\textbf{Writing Resumes in LaTeX},'' in \emph{Proceedings of the Mind of Seth Holloway}. 2011.\\
+%	\smallskip
+%	Seth Holloway, Andrea Holloway. ``\textbf{Accent Modification Rules},'' in \emph{Proceedings of Fun}. 2008.\\
+%\end{body}
+
+%\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+%\header{Skills}
+%
+%\begin{body}
+%	\vspace{17pt}
+%	{(Rated 1 - Basic to 5 - Expert)} \\
+%	\textbf{Programming:} Python (4), Ruby on Rails (4), Perl (3), \LaTeX (3), Javascript (3)\\
+%\end{body}
+%
+%\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Activities and Leadership}
+
+\begin{body}
+	\vspace{17pt}
+\textbf{Security Capture the Flag} Auburn University CTF Team, Samurai  \hfill{} 2014 - \\
+	\vspace{-4pt}
+	\begin{itemize} \itemsep -0pt
+		\item{Studied and presented computer security techniques}
+		\item{Formulated and executed exploits against binaries}
+	\end{itemize}	
+
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Web}
+
+\begin{body}
+	\vspace{17pt}
+	http://about.me/bendill \hfill{} https://github.com/benjwrdill \\
+\end{body}
+
+\end{document}
+
