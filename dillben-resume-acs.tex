@@ -76,7 +76,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Name
-\contact{Benjamin Dill}{231 Brookwood Dr}{Auburn, AL 36830}{dillben@auburn.edu}{(334) 524-2225}
+\contact{Benjamin Dill}{4709 Sylvaner Ln}{Birmingham, AL 35244}{ben@benjamindill.com}{(334) 524-2225}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -129,9 +129,9 @@
   \textbf{Software Engineer}, \emph{Infinity Insurance} \hfill 2018 - 2019 \\
   \vspace*{-4pt}
   \begin{itemize} \itemsep -0pt
-  \item Worked on a small team to maintain and update a front-end system
-  \item Integrated with new backend systems
-  \item Increased delivery cadence from monthly to weekly
+  \item Worked on a small team to maintain and update a front-end direct sales system
+  \item Integrated with new backend systems including credit processing and rules systems
+  \item Increased delivery cadence from monthly to weekly utilizing Continuous Integration methodologies
   \item Worked in SQL and Splunk Logs to understand production and predict business outcomes
   \end{itemize}
   
@@ -152,10 +152,7 @@
   \textbf{Lab Monitor/Student Worker}, \emph{Auburn University} \hfill January 2012 - 2015\\
   \vspace*{-4pt}
   \begin{itemize} \itemsep -0pt  % reduce space between items
-  \item Monitored and serviced computer labs in order to assure availability to students
   \item Worked as frontline tech support
-  \item Performed troubleshooting, virus identification and removal, and PC management
-  \item Visited user offices to aid in PC problem diagnosis
   \item Ensured open communication lines between coworkers on varied time schedules
   \end{itemize}
   \vspace{17pt}
@@ -163,34 +160,55 @@
 
 \smallskip
 
-% \newpage{} % uncomment this line if you want to force a new page
-% $$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Projects
-\header{Projects}
+\setlength{\topsep}{0pt}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}
+}
 
-\begin{body}
-  \vspace{17pt}
-  \textbf{vue-smells} \url{https://github.com/benjwrdill/vue-smells} \hfill{} 2017
-  \begin{itemize}
-  \item{Created a single-page application using Vue.js}
-  \item{Accumulated code smells as a learning and mindfulness exercise to aid in development team learning}
-  \item{Implemented the Store/Mutation/Action state management pattern with Vuex}
-  \end{itemize}
-\end{body}
+\newcommand{\lineover}{
+  \begin{changemargin}{-0.05in}{-0.05in}
+    \vspace*{-8pt}
+    \hrulefill \\
+    \vspace*{-2pt}
+  \end{changemargin}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% Publications
-% \header{Selected Publications}
-% 
-% \begin{body}
-%   \vspace{14pt}
-%   Seth Holloway. ``\textbf{Writing Resumes in LaTeX},'' in \emph{Proceedings of the Mind of Seth Holloway}. 2011.\\
-%   \smallskip
-%   Seth Holloway, Andrea Holloway. ``\textbf{Accent Modification Rules},'' in \emph{Proceedings of Fun}. 2008.\\
-% \end{body}
+\newcommand{\header}[1]{
+  \begin{changemargin}{-0.5in}{-0.5in}
+    \scshape{#1}\\
+    \lineover
+  \end{changemargin}
+}
 
-% \smallskip
+\newcommand{\contact}[5]{
+  \begin{changemargin}{-0.5in}{-0.5in}
+    \begin{center}
+      {\Large \scshape {#1}}\\ \smallskip
+      {#2}\\ \smallskip 
+      {#3}\\ \smallskip
+      {#4}\\ \smallskip
+      {#5}\smallskip
+    \end{center}
+  \end{changemargin}
+}
 
+\newenvironment{body} {
+  \vspace*{-16pt}
+  \begin{changemargin}{-0.25in}{-0.5in}
+  }	
+  {\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+  \textbf{#1} \hfill \emph{#2\\}
+  #3\\ 
+  #4\\
+}
+
+% END RESUME DEFINITIONS
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Skills
@@ -199,50 +217,11 @@
 \begin{body}
   \vspace{17pt}
   {(Rated 1 - Basic to 5 - Expert)} \\
-  \textbf{Programming:} Java (4), Javascript (4), Python (3), Ruby on Rails (2), Perl (2), \LaTeX (3)\\
+  \textbf{Technologies} Jenkins (3), jUnit (4), Cucumber (5), Kubernetes (2), git (4), svn (2), Spring (2) \\
+  \textbf{Programming:} Java (4), Javascript (4), Go (3), Clojure (2), Python (2), Ruby on Rails (1) \\
 \end{body}
 
 \smallskip
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% Leadership
-\header{Activities and Leadership}
-
-\begin{body}
-  \vspace{17pt}
-  \textbf{Head Organizer}, Steel City Swing \hfill{} 2015 - Current\\
-  \vspace{-4pt}
-  \begin{itemize}
-  \item{Coordinated on budget matters with committee members in order to achieve long-term goals}
-  \item{Lead instruction and recruitment efforts across all platforms}
-  \item{Started an SEO and print marketing program}
-  \item{Drove integrations across several APIs (Facebook Graph API, Meetup, Weebly)}
-  \end{itemize}
-  \textbf{Amateur Radio Operator}, FCC callsign KK4WZF \hfill{} 2014 - Current\\
-  \vspace{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item{Built and experimented with various antenna designs}
-  \item{Administered local teaching and testing initiatives}
-  \end{itemize}
-  \textbf{Security Capture the Flag} Auburn University CTF Team (2015), Samurai \hfill{} 2014 - 2016\\
-  \vspace{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item{Studied and presented computer security techniques}
-  \item{Formulated and executed exploits against binaries}
-  \end{itemize}	
-  \textbf{Outreach Coordinator}, Auburn University Amateur Radio Club (AUARC) \hfill {} 2013 - 2015\\
-  \textbf{Head Instructor}, Auburn University Swing Dance Association (AUSDA) \hfill {} 2010 - 2015\\
-  \vspace{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item{Created and iterated upon class curricula for introductory through advanced class tracks}
-  \item{Worked with incoming instructors to improve teaching style and clarity}
-  \end{itemize}
-  \textbf{President}, Auburn University Swing Dance Association (AUSDA) \hfill {} 2007 - 2009\ \ \ \ \ \ \\
-\end{body}
-
-\smallskip
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Awards and Honors
@@ -250,8 +229,9 @@
 
 \begin{body}
   \vspace{17pt}
-  http://about.me/bendill \hfill{} https://github.com/benjwrdill \\
+  \url{https://benjamindill.com} \hfill{} \url{https://github.com/benjwrdill} \\
 \end{body}
 
 \end{document}
+
 
