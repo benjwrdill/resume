@@ -4,6 +4,10 @@
 \usepackage{amssymb}
 \usepackage[usenames]{color}
 \usepackage{hyperref}
+\usepackage[misc]{ifsym}
+\usepackage{fontawesome5}
+
+\input{job.tex}
 
 \leftmargin=0.25in
 \oddsidemargin=0.25in
@@ -11,7 +15,7 @@
 \topmargin=-0.25in
 \textheight=9.25in
 
-\raggedright
+\raggedright{}
 
 \pagenumbering{gobble}
 
@@ -20,7 +24,7 @@
 
 \newenvironment{changemargin}[2]{%
   \begin{list}{}{%
-      \setlength{\topsep}{0pt}%
+      \setlength{\topsep}{0pt}%p
       \setlength{\leftmargin}{#1}%
       \setlength{\rightmargin}{#2}%
       \setlength{\listparindent}{\parindent}%
@@ -33,7 +37,7 @@
 \newcommand{\lineover}{
   \begin{changemargin}{-0.05in}{-0.05in}
     \vspace*{-8pt}
-    \hrulefill \\
+    \hrulefill{} \\
     \vspace*{-2pt}
   \end{changemargin}
 }
@@ -41,18 +45,18 @@
 \newcommand{\header}[1]{
   \begin{changemargin}{-0.5in}{-0.5in}
     \scshape{#1}\\
-    \lineover
+    \lineover{}
   \end{changemargin}
 }
 
-\newcommand{\contact}[5]{
+\newcommand{\contact}[3]{
   \begin{changemargin}{-0.5in}{-0.5in}
     \begin{center}
-      {\Large \scshape {#1}}\\ \smallskip
-      {#2}\\ \smallskip 
-      {#3}\\ \smallskip
-      {#4}\\ \smallskip
-      {#5}\smallskip
+      {\faUser{} \hspace{1px} \Large \scshape {#1}}
+      \hspace*{\fill}
+      {\faPhone{} \hspace{1px}{#2}}
+      \hspace*{\fill}
+          {\faEnvelope{} \hspace{1px}{#3}}
     \end{center}
   \end{changemargin}
 }
@@ -76,8 +80,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Name
-\contact{Benjamin Dill}{231 Brookwood Dr}{Auburn, AL 36830}{dillben@auburn.edu}{(334) 524-2225}
-
+\contact{Benjamin Dill}
+        {\href{\phonelink}{\phonestring}}
+        {\href{mailto:\jobmail}{\jobmail}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Objective
@@ -90,6 +95,88 @@
 % 
 % \smallskip
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Experience
+\header{Career}
+
+\begin{body}
+  \vspace{17pt}
+  \textbf{Senior Software Engineer \& Team Lead}, \emph{Meazure Learning} \hfill Jan 2020 $\to$ Current \\
+  \vspace{3pt}
+  Lead a team of engineers developing a video platform core to live proctoring operations
+  \begin{itemize} \itemsep=-0pt
+  \item Built a near real-time ML processing platform for video capable of processing 100\% of platform traffic
+  \item Improved platform UX by simplifying and encapsulating video platform API in client library
+  \item Incepted and lead the company's architecture committee for 12 months
+  \item Maintained and improved a platform handling $15$k$-45$k hours of live streaming video per day
+    \begin{itemize} \itemsep=-0pt
+    \item Optimized platform, processing, and storage in AWS, cutting video platform cost by $\approx 50\%$
+    \item Fixed bugs spanning multiple systems including browser extensions and the core Rails monolith
+    \item Improved developer experience by modularizing and inverting dependencies to increase velocity
+    \end{itemize}
+  \item Managed the team's road map, balancing business needs, technical improvements, and technical debt
+  \item Ran the engineering book club, engaging and leveling up engineers company wide on various topics
+  \end{itemize}
+  \vspace{5pt}
+  \textbf{Java Developer \textendash{} Contractor}, \emph{ACS Group} \hfill May 2019 $\to$ Jan 2020 \\
+  \vspace*{3pt}
+  Embedded in a manufacturing logistics firm supporting new and maintenance projects.
+  \begin{itemize} \itemsep=-0pt
+  \item Automated creation of Docker images to use in the team Continuous Integration environment
+  \item Ingested third-party push notifications for real-time alerting and monitoring of assets in production lines
+  \item Built work flows in applications used to process credit card transactions, shipping notices, and invoices
+  \item Used SQL, Java, and JavaScript to implement vertical slices of functionality for data intensive applications
+  \item Optimized SQL to achieve front end application performance SLAs in database reliant views
+  \item Piloted integration with provider back ends to retrieve IoT sensor data and present it to clients
+  \item Created test cases and orchestrated roll out for new credit card processor integration through three providers, supporting thousands of authorizations per hour
+  \item Worked with users to define acceptance criteria for new features requested by the business
+  \end{itemize}
+  \vspace{5pt}
+  
+
+  \textbf{Software Engineer}, \emph{Kemper Corporation/Infinity Insurance} \hfill March 2018 $\to$ May 2019 \\
+  \vspace*{3pt}
+  Maintained systems at the top of the sales funnel for a \$100M direct sales business.
+  \begin{itemize} \itemsep=-0pt
+  \item Piloted a process using Gitlab CI to verify code builds and deployments in test environments using Docker before submitting code changes for review and promotion
+  \item Shortened lead times on new and bug fix work to hours using CI/CD principles including short-lived branches, test automation, and the git-flow integration model
+  \item Integrated with new back end systems including credit processors and rules systems used to evaluate quotes at all steps of the quoting process to increase conversion
+  \item Increased delivery cadence from monthly to weekly by adjusting process to increase confidence
+  \item Worked in SQL and Splunk Logs to understand production, troubleshoot issues in the quoting funnel including dependent services, and predict business outcomes
+  \end{itemize}
+  \vspace{5pt}
+  
+
+  \textbf{Software Developer in Testing}, \emph{Command Alkon, Incorporated} \hfill January 2015 $\to$ March 2018 \\
+  \vspace*{3pt}
+  Acted as an internal solutions provider to multi-regional teams providing build and automation support
+  \begin{itemize} \itemsep=-0pt  % reduce space between items
+  \item Created systems to automate the development and delivery process using Jenkins and in-house solutions
+  \item Built standardized development environments using Vagrant
+  \item Created a Ruby on Rails API and front-end application to aggregate test and build data and provide real-time development data to stakeholders
+  \item Managed Chef automation for development group local and cloud machines
+  \end{itemize}
+  \vspace{5pt}
+
+\end{body}
+
+\smallskip
+
+% END RESUME DEFINITIONS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Skills
+%% \header{Skills}
+
+%% \begin{body}
+%%   \vspace{17pt}
+%%          {(Rated 1 - Basic to 5 - Expert)} \\
+%%          \textbf{Technologies} Jenkins (3), jUnit (4), Cucumber (5), Kubernetes (2), git (4), svn (2), Spring (2) \\
+%%          \textbf{Programming:} Java (4), JavaScript (4), Go (3), Clojure (2), Python (2), Ruby on Rails (1) \\
+%% \end{body}
+
+%% \smallskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Education
@@ -108,150 +195,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% Experience
-\header{Career History}
-
-\begin{body}
-  \vspace{17pt}
-  \textbf{Java Developer}, \emph{American Cyber Systems} \hfill 2019 - Current \\
-  \vspace*{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item Worked embedded in a client team supporting many initiatives in a manufacturing logistics firm
-  \item Used SQL, Java, and Javascript to implement features in Web and Mobile environments
-  \item Managed and optimized SQL to improve backend performance and achieve application performance SLAs
-  \item Integrated with service provider backends to collect data from IOT sensors and present it to customers
-  \item Created test cases and supported rollout for new credit card processor integration across three providers
-  \item Replaced multiple mainframe programs with web-based workflows from start to finish
-  \item Worked with users to define acceptance criteria for new features and defects
-  \end{itemize}
-  
-  \vspace{17pt}
-  \textbf{Software Engineer}, \emph{Infinity Insurance} \hfill 2018 - 2019 \\
-  \vspace*{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item Worked on a small team to maintain and update a front-end system
-  \item Integrated with new backend systems
-  \item Increased delivery cadence from monthly to weekly
-  \item Worked in SQL and Splunk Logs to understand production and predict business outcomes
-  \end{itemize}
-  
-  \vspace{17pt}
-  \textbf{Software Developer in Testing}, \emph{Command Alkon, Incorporated} \hfill 2015 - 2018 \\
-  \vspace*{-4pt}
-  \begin{itemize} \itemsep -0pt  % reduce space between items
-  \item Acted as an internal solutions provider to several multi-regional teams
-  \item Created systems to automate the development and delivery process using Jenkins and in-house solutions
-  \item Used TFS and git as part of the software development collaborative process
-  \item Spearheaded implementation of automated testing as a first-class citizen of the development process
-  \item Implemented several programs to aid in new developer on-boarding and continuing education
-  \item Created a Ruby on Rails API and front-end application to aggregate test and build data and provide real-time development data to stakeholders
-  \item Managed Chef automation for development group local and cloud machines
-  \end{itemize}
-  \vspace{17pt}
-
-  \textbf{Lab Monitor/Student Worker}, \emph{Auburn University} \hfill January 2012 - 2015\\
-  \vspace*{-4pt}
-  \begin{itemize} \itemsep -0pt  % reduce space between items
-  \item Monitored and serviced computer labs in order to assure availability to students
-  \item Worked as frontline tech support
-  \item Performed troubleshooting, virus identification and removal, and PC management
-  \item Visited user offices to aid in PC problem diagnosis
-  \item Ensured open communication lines between coworkers on varied time schedules
-  \end{itemize}
-  \vspace{17pt}
-\end{body}
-
-\smallskip
-
-% \newpage{} % uncomment this line if you want to force a new page
-% $$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Projects
-\header{Projects}
-
-\begin{body}
-  \vspace{17pt}
-  \textbf{vue-smells} \url{https://github.com/benjwrdill/vue-smells} \hfill{} 2017
-  \begin{itemize}
-  \item{Created a single-page application using Vue.js}
-  \item{Accumulated code smells as a learning and mindfulness exercise to aid in development team learning}
-  \item{Implemented the Store/Mutation/Action state management pattern with Vuex}
-  \end{itemize}
-\end{body}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% Publications
-% \header{Selected Publications}
-% 
-% \begin{body}
-%   \vspace{14pt}
-%   Seth Holloway. ``\textbf{Writing Resumes in LaTeX},'' in \emph{Proceedings of the Mind of Seth Holloway}. 2011.\\
-%   \smallskip
-%   Seth Holloway, Andrea Holloway. ``\textbf{Accent Modification Rules},'' in \emph{Proceedings of Fun}. 2008.\\
-% \end{body}
-
-% \smallskip
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% Skills
-\header{Skills}
-
-\begin{body}
-  \vspace{17pt}
-  {(Rated 1 - Basic to 5 - Expert)} \\
-  \textbf{Programming:} Java (4), Javascript (4), Python (3), Ruby on Rails (2), Perl (2), \LaTeX (3)\\
-\end{body}
-
-\smallskip
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% Leadership
-\header{Activities and Leadership}
-
-\begin{body}
-  \vspace{17pt}
-  \textbf{Head Organizer}, Steel City Swing \hfill{} 2015 - Current\\
-  \vspace{-4pt}
-  \begin{itemize}
-  \item{Coordinated on budget matters with committee members in order to achieve long-term goals}
-  \item{Lead instruction and recruitment efforts across all platforms}
-  \item{Started an SEO and print marketing program}
-  \item{Drove integrations across several APIs (Facebook Graph API, Meetup, Weebly)}
-  \end{itemize}
-  \textbf{Amateur Radio Operator}, FCC callsign KK4WZF \hfill{} 2014 - Current\\
-  \vspace{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item{Built and experimented with various antenna designs}
-  \item{Administered local teaching and testing initiatives}
-  \end{itemize}
-  \textbf{Security Capture the Flag} Auburn University CTF Team (2015), Samurai \hfill{} 2014 - 2016\\
-  \vspace{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item{Studied and presented computer security techniques}
-  \item{Formulated and executed exploits against binaries}
-  \end{itemize}	
-  \textbf{Outreach Coordinator}, Auburn University Amateur Radio Club (AUARC) \hfill {} 2013 - 2015\\
-  \textbf{Head Instructor}, Auburn University Swing Dance Association (AUSDA) \hfill {} 2010 - 2015\\
-  \vspace{-4pt}
-  \begin{itemize} \itemsep -0pt
-  \item{Created and iterated upon class curricula for introductory through advanced class tracks}
-  \item{Worked with incoming instructors to improve teaching style and clarity}
-  \end{itemize}
-  \textbf{President}, Auburn University Swing Dance Association (AUSDA) \hfill {} 2007 - 2009\ \ \ \ \ \ \\
-\end{body}
-
-\smallskip
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Awards and Honors
-\header{Web}
+%% \header{Web}
 
-\begin{body}
-  \vspace{17pt}
-  http://about.me/bendill \hfill{} https://github.com/benjwrdill \\
-\end{body}
+%% \begin{body}
+%%   \vspace{17pt}
+%%   \url{https://benjamindill.com} \hfill{} \url{https://github.com/benjwrdill} \\
+%% \end{body}
 
 \end{document}
-
